@@ -14,6 +14,7 @@ if (localStorage.length) {
         document
           .getElementById(f)
           .parentNode.removeChild(document.getElementById(f));
+        localStorage.removeItem(`task${f}`);
       };
       k.append(btn);
       k.setAttribute("id", f);
@@ -21,11 +22,10 @@ if (localStorage.length) {
     } else break;
   }
 }
-
 button.onclick = () => {
   if (input.value) {
     f++;
-    localStorage.setItem(`task${f}`, input.value);
+    window.localStorage.setItem(`task${f}`, input.value);
     let newdiv = document.createElement("div");
     newdiv.append(input.value);
     newdiv.classList.add("task");
@@ -36,6 +36,7 @@ button.onclick = () => {
       document
         .getElementById(f)
         .parentNode.removeChild(document.getElementById(f));
+      localStorage.removeItem(`task${f}`);
     };
     newdiv.append(btn);
     maindiv.append(newdiv);
