@@ -10,14 +10,12 @@ if (localStorage.length) {
       k.append(localStorage[i]);
       let btn = document.createElement("button");
       btn.append("Delete");
+      k.setAttribute("id", f);
       btn.onclick = () => {
-        document
-          .getElementById(f)
-          .parentNode.removeChild(document.getElementById(f));
-        localStorage.removeItem(`task${f}`);
+        maindiv.removeChild(btn.parentNode);
+        localStorage.removeItem(`task${k.getAttribute("id")}`);
       };
       k.append(btn);
-      k.setAttribute("id", f);
       maindiv.append(k);
     } else break;
   }
@@ -33,10 +31,8 @@ button.onclick = () => {
     let btn = document.createElement("button");
     btn.append("Delete");
     btn.onclick = () => {
-      document
-        .getElementById(f)
-        .parentNode.removeChild(document.getElementById(f));
-      localStorage.removeItem(`task${f}`);
+      maindiv.removeChild(btn.parentNode);
+      localStorage.removeItem(`task${newdiv.getAttribute("id")}`);
     };
     newdiv.append(btn);
     maindiv.append(newdiv);
