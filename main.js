@@ -24,10 +24,10 @@ if (localStorage.length) {
 }
 button.onclick = () => {
   if (input.value) {
-    f++;
     window.localStorage.setItem(`task${f}`, input.value);
     let newdiv = document.createElement("div");
     newdiv.append(input.value);
+    f++;
     newdiv.classList.add("task");
     newdiv.setAttribute("id", f);
     let btn = document.createElement("button");
