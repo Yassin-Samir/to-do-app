@@ -35,6 +35,7 @@ button.onclick = () => {
     btn.onclick = () => {
       maindiv.removeChild(btn.parentNode);
       localStorage.removeItem(`task${newdiv.getAttribute("id")}`);
+      f--;
     };
     newdiv.append(btn);
     maindiv.append(newdiv);
