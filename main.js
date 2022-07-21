@@ -3,11 +3,13 @@ let button = document.querySelector(".main > button");
 let maindiv = document.querySelector(".main");
 let f = 0;
 if (localStorage.length) {
-  for (let i in localStorage) {
-    if (typeof localStorage[i] == "string") {
+  let v = Object.entries(localStorage);
+  for (let i = 0; i < v.length; i++) {
+    if (typeof v[i][1] == "string") {
+      f++;
       let k = document.createElement("div");
       k.classList.add("task");
-      k.append(localStorage[i]);
+      k.append(v[i][1]);
       let btn = document.createElement("button");
       btn.append("Delete");
       k.setAttribute("id", f);
