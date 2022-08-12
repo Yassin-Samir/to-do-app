@@ -1,3 +1,4 @@
+// @ts-nocheck
 let input = document.querySelector("input");
 let button = document.querySelector(".main > button");
 let maindiv = document.querySelector(".main");
