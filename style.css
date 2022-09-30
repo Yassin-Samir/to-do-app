@@ -3,9 +3,9 @@
   box-sizing: border-box;
 }
 .main {
-  width: 90%;
-  margin: auto;
-  padding: 10px;
+  min-width: 70%;
+  max-width: 90%;
+  padding: 20px 10px;
   background-color: #ddd;
   border-radius: 9px;
   -webkit-border-radius: 9px;
@@ -16,6 +16,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: hidden;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 .main input {
   width: 80%;
