@@ -1,10 +1,13 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 .main {
   min-width: 70%;
   max-width: 90%;
+  max-height: 300px;
+
   padding: 20px 10px;
   background-color: #ddd;
   border-radius: 9px;
@@ -15,15 +18,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+.main::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.main::-webkit-scrollbar-track {
+  background: gray;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background: red;
 }
 .main input {
   width: 80%;
